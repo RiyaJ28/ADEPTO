@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+    <nav class="navbar navbar-expand-lg fixed-top container" id="navbar-n">
+        <div class="container-fluid navigation">
+            <a class="navbar-brand ms-2 brand-name text-reset" href="#">
+                <img src="images/logo.png" alt="Logo" width="80" height="40" class="d-inline-block align-text-top">
+                ADEPTO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link color" aria-current="page" href="/Dopex/home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link color" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#dropdown-menu-1">Learn</a>
+                        <ul class="dropdown-menu" id="dropdown-menu-1">
+                            <li><a class="dropdown-item" href="https://docs.dopex.io/">Documentation</a></li>
+                            <li><a class="dropdown-item" href="https://blog.dopex.io/">blog</a></li>
+                            <li><a class="dropdown-item" href="https://dopex.notion.site/The-Dopex-Knowledge-Base-6a8e6b6cb2d84db3b5ea5824553c7c7b">Knowledge <Base></Base></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link color"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#dropdown-menu-2">community</a>
+                        <ul class="dropdown-menu" id="dropdown-menu-2">
+                            <li><a class="dropdown-item" href="https://twitter.com/dopex_io" target="_blank">Twitter</a></li>
+                            <li><a class="dropdown-item" href="https://discord.com/invite/dopex" target="_blank">Discord</a></li>
+                        </ul>
+                    </li>
+                    <p class="nav-item dropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#dropdown-menu-3">
+                        <a class="nav-link color" aria-disabled="true">developers</a>
+                        <ul class="dropdown-menu" id="dropdown-menu-3">
+                            <li><a class="dropdown-item" href="https://github.com/dopex-io">GitHub</a></li>
+                            <li><a class="dropdown-item" href="https://github.com/dopex-io/bug-bounty">Bug Bounty</a></li>
+                        </ul>
+                    </p>
+                    
+                </ul>
+                <a class="nav-item nav-link sun" onclick="changeTheme()">
+                    <svg class="color" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </svg>
+                </a>
+                <a class="nav-item nav-link moon" onclick="changeThemeMoon()">
+                    <svg class="color" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                    </svg>
+                </a>
+                <a class="color nav-link" onclick="">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-globe" viewBox="0 0 16 16">
+                        <path
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                    </svg><span class="language ms-2">EN</span>
+                </a>
+                <button class="btn bg-primary text-reset ms-4">Use Dopex</button>
+            </div>
+        </div>
+    </nav>
+    <div class="main container mt-5">
+        <div class="head mt-5">
+            <h1 class="heading"><span class="color-heading">D</span>ECENTRALIZED <span
+                    class="color-heading">OPTION</span>S <span class="color-heading">EX</span>CHANGE</h1>
+            <p class="heading-text">Adepto is a maximum liquidity and minimal exposure options protocol</p>
+            <div class="buttons">
+                <button type="button" class="btn btn-primary">Use Dopex</button>
+                <button type="button" class="btn btn-outline-primary">Documentation</button>
+            </div>
+
+        </div>
+        <div class="row grid-1-div">
+            <div class="grid-1 col-lg-4 col-sm-12">
+                <img src="images/vanilla.svg" alt="Logo">
+                <p class="c-title styles_subheader__1dGpG ">VANILLA</p>
+                <h2>SSOV OPTIONS</h2>
+                <p class="grid-1-text">Provide option liquidity via covered calls or cash-secured puts while passively
+                    earning diverse sources of yields.</p>
+            </div>
+            <div class="grid-1 col-lg-4 col-sm-12">
+                <img src="images/options.svg" alt="Logo">
+                <p class="c-title styles_subheader__1dGpG ">OPTION</p>
+                <h2>LIQUIDITY POOLS</h2>
+                <p class="grid-1-text">A platform for option buyers to easily exit & sell their tokenized positions at
+                    any time at a discounted rate. </p>
+            </div>
+            <div class="grid-1 col-lg-4 col-sm-12">
+                <img src="images/structured.svg" alt="Logo">
+                <p class="c-title styles_subheader__1dGpG ">STRUCTURED</p>
+                <h2>ATLANTIC OPTIONS</h2>
+                <p class="grid-1-text">A novel DeFi primitive that aims to improve collateral composability & efficiency
+                    by enabling buyers to borrow option collateral.</p>
+            </div>
+        </div>
+        <div class="built-different">
+            <p class="styles_subheader__1dGpG built-title">BUILT DIFFERENT</p>
+            <h2>DEFI FIRST & POWERFUL OPTIONS</h2>
+            <p class="built-text color-1">We built a protocol with vast improvements over the existing options market.</p>
+            <div class="container row mt-5">
+                <div class="col-md-6 col-sm-12 built-different-box">
+                    <div class="built-different-img">
+                        <img src="images/staking-yield.svg" alt="#">
+                    </div>
+                    <div class="built-different-text">
+                        <h3 class="mb-2">Staking Yield</h3>
+                        <p class="color-1">
+                            Your collateral never goes un-used and is put to work by staking in other protocols to earn
+                            yields.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 built-different-box">
+                    <div class="built-different-img">
+                        <img src="images/collateral.svg" alt="#">
+                    </div>
+                    <div class="built-different-text">
+                        <h3 class="mb-2">Collateral Borrowing</h3>
+                        <p class="color-1">
+                            Atlantic options offer buyers with unique products like applying straddle strategies with a
+                            fraction of the cost and insuring leveraged longs.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 built-different-box">
+                    <div class="built-different-img">
+                        <img class="" src="images/minimize-risk.svg" alt="#">
+                    </div>
+                    <div class="built-different-text">
+                        <h3 class="mb-2">Minimize Risk</h3>
+                        <p class="color-1">
+                            Offset risk and minimize losses as a liquidity provider with rDPX rebates.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 built-different-box">
+                    <div class="built-different-img">
+                        <img src="images/pricing.svg" alt="#">
+                    </div>
+                    <div class="built-different-text">
+                        <h3 class="mb-2">Pricing Efficiency</h3>
+                        <p class="color-1">
+                            Our options collateral efficiency gives Dopex a distinct advantage in pricing, allowing for
+                            immediate arbitrage opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Investors container overflow-x-hidden bg-white-dark dark:bg-black text-white">
+            <p class="styles_subheader__1dGpG Investors-title">Investors & Partners</p>
+            <div class="Investors-content row">
+                <div class="col-md-6 invester-logo">
+                    <h3 class="investor-name">TΞtranodΞ</h3>
+                </div>
+                <div class="col-md-6 invester-logo">
+                    <h3 class="investor-name">DefiGod</h3>
+                </div>
+                <div class="col-md-6 invester-logo">
+                    <img class="img-size filter h-36 dark:invert dark:brightness-0 object-contain" src="images/orca_traders.png" alt="#">
+                </div>
+                <div class="col-md-6 invester-logo">
+                    <img class="img-size filter h-36 dark:invert dark:brightness-0 object-contain" src="images/pattern.png" alt="#">
+                </div>
+                <div class="col-md-6 invester-logo">
+                    <img class="img-size filter h-36 dark:invert dark:brightness-0 object-contain" src="images/debase.svg" alt="#">
+                </div>
+                <div class="col-md-6 invester-logo invester-logo">
+                    <img class="img-size filter h-36 dark:invert dark:brightness-0 object-contain" src="images/hardwood_orcz.svg" alt="#">
+                </div>
+                <div class="col-md-6 invester-logo ">
+                    <img class="img-size filter h-36 dark:invert dark:brightness-0 object-contain" src="images/dcv.png" alt="#">
+                </div>
+            </div>
+        </div>
+        <div class="synergy">
+            <div class="col-md-6">
+                <p class="styles_subheader__1dGpG">SYNERGY</p>
+                <h3>DUAL TOKEN MODEL</h3>
+                <p class="color-1">Dopex utilizes two separate tokens to coordinate new ecosystem dynamics in a synergistic feedback loop.</p>
+                
+                <a href="#">Tokenomics ⟶</a>
+            </div>
+            <div class="col-md-6 cards">
+                <div class="card">
+                    <svg width="65" height="65" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-1"><circle cx="32.5" cy="32.5" r="32.5" fill="#000"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M18.139 25.115l7.995-12.47-11.92 11.92c-.99.992-.524 2.687.835 3.03l6.318 1.6c-.564.887-1.203 2.005-1.7 3.19-.454 1.086-.833 2.33-.871 3.56-.038 1.261.285 2.612 1.351 3.678 1.602 1.602 2.765 2.16 3.694 2.607l.204.098c.432.21.751.382 1.09.653.342.273.757.691 1.29 1.425.095.129.194.267.299.412l.002.004.001.001c1.163 1.614 2.989 4.147 5.344 5.828 1.315.939 2.875 1.676 4.658 1.82 1.807.146 3.694-.328 5.614-1.565 1.84-1.185 3.052-2.505 3.622-4.042.575-1.548.405-3.065-.013-4.441-.383-1.26-1.021-2.546-1.617-3.745l-.112-.226c-.652-1.314-1.267-2.584-1.676-3.914-.799-2.596-.257-3.721.084-4.167a1.882 1.882 0 01.807-.606.469.469 0 01.021-.008l.038-.009.064-.02.283-.093.745-.246c.617-.203 1.442-.475 2.27-.752.828-.275 1.663-.556 2.301-.776.318-.11.594-.206.799-.281.1-.037.196-.073.275-.105a2.829 2.829 0 00.267-.126l.003-.001c.024-.014.188-.104.348-.265.643-.642.437-1.429.416-1.51l-.001-.004a1.617 1.617 0 00-.29-.595 3.654 3.654 0 00-.165-.202 17.37 17.37 0 00-.406-.445c-.195-.208-3.985-4.047-7.169-7.273-2.205-2.233-4.119-4.172-4.348-4.408.027.028 2.066 3.236 4.084 6.412 1.978 3.111 3.936 6.192 3.962 6.218-.347.117-.711.24-1.076.36a715.46 715.46 0 01-3.002.993l-.239.079-.034.01a4.66 4.66 0 00-.83.344 5.042 5.042 0 00-1.636 1.388c-1.128 1.475-1.603 3.74-.594 7.018.494 1.607 1.22 3.09 1.865 4.389l.063.127c.64 1.292 1.17 2.358 1.473 3.358.303.996.323 1.753.075 2.422-.252.68-.876 1.52-2.37 2.482-1.411.91-2.616 1.155-3.646 1.072-1.053-.085-2.075-.527-3.075-1.241-1.907-1.361-3.437-3.476-4.643-5.142l-.282-.39c-.658-.904-1.262-1.546-1.874-2.035-.616-.492-1.185-.785-1.684-1.027l-.214-.104c-.819-.392-1.605-.77-2.828-1.993-.282-.282-.446-.687-.426-1.344.02-.687.246-1.524.627-2.434.76-1.814 1.966-3.518 2.448-4.161.786-1.05.226-2.53-1.008-2.842l-5.886-1.49zm13.334 12.932s-2.438 0-4.063-1.495c-1.625-1.496 0-4.487 0-4.487s.474.3 2.269 2.393c1.794 2.093 1.794 3.589 1.794 3.589z" fill="url(#paint0_linear)"></path><defs><linearGradient id="paint0_linear" x1="32.563" y1="30.597" x2="32.5" y2="52.496" gradientUnits="userSpaceOnUse"><stop stop-color="#22E1FF"></stop><stop offset="1" stop-color="#002EFF"></stop></linearGradient></defs></svg>
+                    <div class="card-body">
+                      <h5 class="card-title">DPX</h5>
+                      <p class="card-text color-1">DPX is the limited supply governance token.
+                        <br>
+                        <br>
+                        It accrues fees and revenue from pools, vaults and wrappers.</p>
+                    </div>
+                </div>
+                <div class="card" >
+                    <svg width="65" height="67" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="aa" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.536 3.738A32.443 32.443 0 0132.5 1.842c17.95 0 32.5 14.55 32.5 32.5s-14.55 32.5-32.5 32.5S0 52.292 0 34.342c0-6.53 1.926-12.61 5.24-17.704a10.349 10.349 0 01-2.082-6.243C3.158 4.654 7.812 0 13.553 0c3.208 0 6.077 1.453 7.983 3.738z"></path></mask><path fill-rule="evenodd" clip-rule="evenodd" d="M21.536 3.738A32.443 32.443 0 0132.5 1.842c17.95 0 32.5 14.55 32.5 32.5s-14.55 32.5-32.5 32.5S0 52.292 0 34.342c0-6.53 1.926-12.61 5.24-17.704a10.349 10.349 0 01-2.082-6.243C3.158 4.654 7.812 0 13.553 0c3.208 0 6.077 1.453 7.983 3.738z" fill="#002EFF"></path><path d="M21.536 3.738l-8.444 7.049 4.923 5.897 7.232-2.59-3.71-10.356zm-16.295 12.9l9.22 6 4.202-6.457-4.632-6.156-8.79 6.613zm20.006-2.545a21.444 21.444 0 017.253-1.25v-22c-5.13 0-10.075.892-14.674 2.54l7.42 20.71zm7.253-1.25c11.874 0 21.5 9.625 21.5 21.5h22c0-24.025-19.476-43.5-43.5-43.5v22zm21.5 21.5c0 11.873-9.626 21.5-21.5 21.5v22c24.024 0 43.5-19.477 43.5-43.5H54zm-21.5 21.5c-11.874 0-21.5-9.627-21.5-21.5h-22c0 24.023 19.476 43.5 43.5 43.5v-22zM11 34.342c0-4.337 1.272-8.343 3.46-11.705l-18.439-12A43.348 43.348 0 00-11 34.342h22zm3.031-24.318a.633.633 0 01.127.37h-22c0 4.81 1.6 9.277 4.293 12.856l17.58-13.226zm.127.37a.605.605 0 01-.605.605v-22C1.737-11-7.842-1.421-7.842 10.395h22zm-.605.605a.65.65 0 01-.267-.065.568.568 0 01-.194-.148l16.89-14.098A21.373 21.373 0 0013.551-11v22z" fill="#002EFF" mask="url(#aa)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.139 26.957l7.995-12.47-11.92 11.92c-.991.992-.524 2.687.835 3.03l6.318 1.6c-.564.887-1.203 2.005-1.7 3.19-.454 1.086-.833 2.33-.871 3.56-.038 1.261.285 2.612 1.351 3.678 1.602 1.602 2.765 2.16 3.694 2.607l.204.098c.432.21.751.382 1.09.653.342.274.757.691 1.29 1.425.095.129.194.267.299.412l.002.004.001.001c1.163 1.614 2.989 4.147 5.344 5.828 1.315.939 2.875 1.676 4.658 1.82 1.807.146 3.694-.329 5.614-1.565 1.84-1.185 3.052-2.505 3.622-4.042.575-1.548.405-3.065-.013-4.441-.383-1.26-1.021-2.545-1.617-3.745l-.112-.226c-.652-1.314-1.267-2.584-1.676-3.914-.799-2.597-.257-3.721.084-4.167a1.88 1.88 0 01.807-.606.511.511 0 01.021-.008l.038-.008.064-.021.283-.093.745-.245c.617-.204 1.442-.476 2.27-.752a260.04 260.04 0 002.301-.777c.318-.11.594-.206.799-.281.1-.037.196-.073.275-.105a2.829 2.829 0 00.267-.126l.003-.001c.024-.014.188-.104.348-.265.643-.642.437-1.429.416-1.51l-.001-.004a1.617 1.617 0 00-.29-.595 3.654 3.654 0 00-.165-.202 17.37 17.37 0 00-.406-.445c-.195-.208-3.985-4.047-7.169-7.273-2.205-2.233-4.119-4.172-4.348-4.408.027.028 2.066 3.236 4.084 6.412 1.978 3.111 3.936 6.192 3.962 6.219l-1.076.36a715.46 715.46 0 01-3.002.992l-.239.079-.034.01a4.66 4.66 0 00-.83.344 5.042 5.042 0 00-1.636 1.388c-1.128 1.475-1.603 3.74-.594 7.018.494 1.607 1.22 3.09 1.865 4.39l.063.126c.64 1.292 1.17 2.358 1.473 3.358.303.996.323 1.753.075 2.422-.252.68-.876 1.52-2.37 2.482-1.411.91-2.616 1.155-3.646 1.072-1.053-.085-2.075-.527-3.075-1.241-1.907-1.361-3.437-3.476-4.643-5.142l-.282-.39c-.658-.904-1.262-1.546-1.874-2.035-.616-.492-1.185-.785-1.684-1.027l-.214-.104c-.819-.392-1.605-.77-2.828-1.992-.282-.282-.446-.688-.426-1.345.02-.687.246-1.524.627-2.434.76-1.814 1.966-3.518 2.448-4.161.786-1.05.226-2.53-1.008-2.842l-5.886-1.49zm13.334 12.932s-2.438 0-4.063-1.495c-1.625-1.496 0-4.486 0-4.486s.474.299 2.269 2.392c1.794 2.094 1.794 3.589 1.794 3.589z" fill="#fff"></path><circle cx="13.553" cy="10.395" r="8.026" fill="url(#paint0_radial_rdpx)"></circle><path d="M10.556 14.21h1.806v-2.79h.938l1.563 2.79h2.12l-1.888-3.01c1.042-.394 1.644-1.274 1.644-2.397 0-1.575-1.123-2.698-2.952-2.698h-3.23v8.105zm3.08-6.437c.741 0 1.216.416 1.216 1.03 0 .614-.475 1.03-1.216 1.03h-1.274v-2.06h1.274z" fill="#fff"></path><defs><radialGradient id="paint0_radial_rdpx" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(10 12.5 -12.5 10 8.816 4.079)"><stop stop-color="#22E1FF"></stop><stop offset="1" stop-color="#22E1FF" stop-opacity="0"></stop></radialGradient></defs></svg>
+                    <div class="card-body">
+                      <h5 class="card-title">rDPX</h5>
+                      <p class="card-text color-1">
+                        rDPX is the rebate token for option writers.
+                        <br>
+                        <br>
+                        A ton of other utility will be introduced for rDPX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <div class="container row">
+        <div class="col-md-2">
+            <ul>
+            <li><img  src="images/logo.png" alt="#" width="80" height="40"></li>
+            <li><p class="color-1">@ 2023 DOPEX</p></li>
+        </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Product</li>
+                <li><a href="#">Use Dopex</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Learn</li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Knowledge Base</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Community</li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Developers</li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Bug Bounty</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Other</li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </div>
+    </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(".moon").hide();
+function changeTheme(){
+    $(".sun").hide();
+    $(".moon").show();
+    $("body").addClass("light-mode");
+    $("body").removeClass("dark-mode");
+}
+function changeThemeMoon(){
+    $(".sun").show();
+    $(".moon").hide();
+    $("body").removeClass("light-mode");
+    $("body").addClass("dark-mode");
+}
+$(document).ready(function(){
+
+});
+</script>

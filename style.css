@@ -1,0 +1,317 @@
+/*light mode */
+.light-mode{
+    background-color:#f6f9ff;
+    color: black;
+}
+.light-mode nav{
+    background-color:#f6f9ff;
+}
+.light-mode .color{
+    color:#6b7fac;
+}
+.light-mode .color:hover{
+    color:blue;
+}
+.light-mode .heading-text{
+    color:#6b7fac;
+}
+.light-mode .grid-1-text{
+    color: #6b7fac;
+}
+.light-mode .built-different{
+    background-color: white;
+}
+.light-mode .color-1{
+    color:#6b7fac;
+}
+.light-mode .synergy a{
+    color: blue;
+}
+.light-mode .card{
+    background-color: white;
+}
+.light-mode  .card-title{
+    color:black;
+}
+.dark-mode footer li{
+    color: black;
+    font-weight: 500;
+}
+.light-mode footer li a{
+    color:#6b7fac;
+}
+.light-mode .Investors h3{
+    color:black;
+    font-size: 100px;
+}
+.light-mode .Investors .img-size ,.light-mode .Investors svg{
+    --tw-invert: invert(100%);
+    
+}
+.light-mode  .img-size-1{
+    --tw-invert: invert(100%);
+    filter: none;
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+/*dark-mode */
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+.dark-mode nav{
+    background-color: black;
+}
+.dark-mode .grid-1-text{
+    color: #8ACCF4;
+}
+.dark-mode .color{
+    color:#8ACCF4;
+}
+.dark-mode .color:hover{
+    color:white;
+}
+.dark-mode .heading-text{
+    color:#8ACCF4;
+}
+.dark-mode .built-different{
+    background-color: rgb(14 17 25);
+}
+.dark-mode .color-1{
+    color:#8ACCF4;
+}
+.dark-mode .synergy a{
+    color: white;
+}
+.dark-mode .card{
+    background-color: rgb(14 17 25);
+}
+.dark-mode  .card-title{
+    color:white;
+}
+.dark-mode footer li{
+    color: white;
+}
+.dark-mode footer li a{
+    color:#8ACCF4;
+}
+.dark-mode .Investors .img-size {
+    -webkit-filter: grayscale(100%);
+    filter: invert() ;
+    
+}
+/*end*/
+#navbar-n{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+nav{
+    position:static;
+    z-index: 3;
+}
+.navigation{
+    max-width:72rem;
+    align-content: center;
+}
+.brand-name{
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+}
+.color{
+    
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-left: 40px;
+    font-weight: 400;
+}
+
+.color-heading{
+    color: #1d8fe1;
+}
+.main{
+    max-width:72rem;
+    margin-top: 150px;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.heading-text{
+    
+    font-size: 18px;
+}
+.buttons{
+    margin: 30px;
+}
+.buttons button{
+    margin: 10px;
+}
+.head{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding:20px;
+}
+
+.c-title{
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 100;
+    margin-top: 30px;
+    font-size: 1.125rem;
+
+}
+.styles_subheader__1dGpG {
+    background: linear-gradient(170deg,#22e1ff,#1d8fe1 51.79%,#625eb1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.grid-1 h2{
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.grid-1-text{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding:0 20px;
+}
+.grid-1-div{
+    margin-bottom:150px;
+}
+.built-different{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    padding: 35px 0;
+}
+.built-different h2{
+    font-size:2.25rem ;
+    line-height:2.5rem ;
+    font-weight:700 ;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.built-different .built-title{
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+}
+.built-different .built-text{
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+}
+.built-different-box{
+    display: flex;
+}
+.color-1{
+    
+    font-size: 18px;
+    font-weight: 400;
+}
+.built-different-box h3{
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.built-different-text{
+    margin: 16px 16px 0 16px;
+}
+.built-different-img{
+    display: flex;
+    align-items: center;
+}
+.Investors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    padding-top: 170px;
+}
+.Investors .Investors-title{
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+}
+.Investors .Investors-content{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.img-size{
+    object-fit: contain;
+    max-width: 100%;
+    height:6rem;
+}
+.img-size-1{
+    object-fit: contain;
+    max-width: 100%;
+    height:6rem;
+}
+
+.synergy{
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.synergy .cards{
+    display: flex;
+}
+.card{
+    margin:10px;
+    width:18rem;
+    padding:20px;
+    
+}
+.card-title{
+    
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.synergy a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.synergy h3{
+    font-weight: 700;
+}
+footer{
+    align-content: center;
+    max-width: 72rem;
+}
+footer li{
+    list-style: none;
+    line-height: 2;
+    font-weight: 500;
+}
+footer li a{
+    
+    text-decoration: none;
+}
+.investor-name{
+    font-size: 3rem;
+    line-height: 1;
+}
+.invester-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px;
+}
